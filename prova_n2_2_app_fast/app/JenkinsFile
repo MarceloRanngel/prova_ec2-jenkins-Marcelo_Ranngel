@@ -3,8 +3,8 @@ pipeline{
     environment{
         workspaceN2 = '$WORKSPACE/app'
     }
-    stages{
-        stage('Preparando Workspace'){
+    Stages{
+        Stage('Preparando Workspace'){
             echo 'Criando Gradle Wrapper...'
             dir("$workspaceN2"){
                 sh 'gradle wrapper'
