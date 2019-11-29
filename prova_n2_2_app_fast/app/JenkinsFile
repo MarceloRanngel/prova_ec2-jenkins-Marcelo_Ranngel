@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        workspaceN2 = '$WORKSPACE/prova_n2_2_app_fast/app'
+        workspaceN2 = '$WORKSPACE/app'
     }
     stages {
         stage('Preparando Workspace') {
