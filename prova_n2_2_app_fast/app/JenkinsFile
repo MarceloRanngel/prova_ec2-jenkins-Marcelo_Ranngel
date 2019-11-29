@@ -3,7 +3,7 @@ pipeline {
     environment {
         workspaceN2 = '$WORKSPACE/prova_n2_2_app_fast/app'
     }
-    Stages {
+    stages {
         stage('Preparando Workspace') {
             steps {
                 echo 'Criando Gradle Wrapper...'
