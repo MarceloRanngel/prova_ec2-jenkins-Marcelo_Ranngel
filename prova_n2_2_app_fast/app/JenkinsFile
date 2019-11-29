@@ -1,15 +1,15 @@
 pipeline {
     agent any
     environment {
-        workspaceN2 = '$WORKSPACE/prova_n2_2_app_fast'
+        workspaceN2 = '$WORKSPACE/prova_n2_2_app_fast/app'
     }
     stages {
         stage('Preparando Workspace') {
             steps {
                 echo 'Criando Gradle Wrapper...'
-                dir("$workspaceN2") {
+
                     sh 'gradle wrapper'
-                }
+
             }
 
         }
