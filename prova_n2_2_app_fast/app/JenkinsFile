@@ -18,7 +18,7 @@ pipeline {
         stage('Testes Unitarios') {
             steps{
                 echo 'Executando Testes Unitarios...'
-                dir('$workspaceN2'){
+                dir('$workspaceN2/app'){
                     sh './gradlew test'
                 }
             }
@@ -27,7 +27,7 @@ pipeline {
         stage('Build APK'){
             steps{
                 echo 'Contruindo APK da Aplicação...'
-                dir('$workspaceN2'){
+                dir('$workspaceN2/app'){
                     sh './gradlew assembleRelease'
                 }
             }
@@ -36,7 +36,7 @@ pipeline {
         stage('Arquivar APK'){
             steps{
                 echo 'Arquivando APK gerada...'
-                dir('$workspaceN2'){
+                dir('$workspaceN2/app'){
                     archiveArtifacts artifacts: '**/release-unsigned.apk', fingerprint: true , allowEmptyArchive: false
                 }
             }
