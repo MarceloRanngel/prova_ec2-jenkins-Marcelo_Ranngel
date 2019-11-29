@@ -17,7 +17,7 @@ pipeline {
         stage('Testes Unitarios') {
             steps{
                 echo 'Executando Testes Unitarios...'
-                dir("$workspaceN2"){
+                dir('$workspaceN2'){
                     sh './gradlew test'
                 }
             }
