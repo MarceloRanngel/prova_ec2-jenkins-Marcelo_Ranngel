@@ -1,13 +1,13 @@
 pipeline {
     agent any
     environment {
-        workspaceN2 = '$WORKSPACE/prova_n2_2_app_fast'
+        workspaceN2 = "$WORKSPACE/prova_n2_2_app_fast"
     }
     stages {
         stage('Preparando Workspace') {
             steps {
                 echo 'Criando Gradle Wrapper...'
-                dir('$workspaceN2'){
+                dir("$workspaceN2"){
                     sh 'gradle wrapper'
                 }
 
@@ -18,8 +18,8 @@ pipeline {
         stage('Testes Unitarios') {
             steps{
                 echo 'Executando Testes Unitarios...'
-                dir('$workspaceN2'){
-                    sh '$workspaceN2/gradlew test'
+                dir("$workspaceN2"){
+                    sh './gradlew test'
                 }
             }
         }
@@ -27,8 +27,8 @@ pipeline {
         stage('Build APK'){
             steps{
                 echo 'Contruindo APK da Aplicação...'
-                dir('$workspaceN2'){
-                    sh '$workspaceN2/gradlew assembleRelease'
+                dir("$workspaceN2"){
+                    sh './gradlew assembleRelease'
                 }
             }
         }
@@ -36,7 +36,7 @@ pipeline {
         stage('Arquivar APK'){
             steps{
                 echo 'Arquivando APK gerada...'
-                dir('$workspaceN2'){
+                dir("$workspaceN2"){
                     archiveArtifacts artifacts: '**/release-unsigned.apk', fingerprint: true , allowEmptyArchive: false
                 }
             }
