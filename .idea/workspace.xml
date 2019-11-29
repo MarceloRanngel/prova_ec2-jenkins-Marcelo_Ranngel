@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="44b026e5-79b8-4251-9ef5-5a001aa55c85" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/prova_n2_2_app_fast/app/JenkinsFile" beforeDir="false" afterPath="$PROJECT_DIR$/prova_n2_2_app_fast/app/JenkinsFile" afterDir="false" />
-    </list>
+    <list default="true" id="44b026e5-79b8-4251-9ef5-5a001aa55c85" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

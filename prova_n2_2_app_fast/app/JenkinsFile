@@ -37,7 +37,7 @@ pipeline {
             steps{
                 echo 'Arquivando APK gerada...'
                 dir("$workspaceN2"){
-                    archiveArtifacts artifacts: '**/release-unsigned.apk', fingerprint: true , allowEmptyArchive: false
+                    archiveArtifacts artifacts: '**/app-release-unsigned.apk', fingerprint: true , allowEmptyArchive: false
                 }
             }
         }
