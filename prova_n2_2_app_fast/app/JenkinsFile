@@ -7,8 +7,9 @@ pipeline {
         stage('Preparando Workspace') {
             steps {
                 echo 'Criando Gradle Wrapper...'
-
+                dir('$workspace'){
                     sh 'gradle wrapper'
+                }
 
             }
 
